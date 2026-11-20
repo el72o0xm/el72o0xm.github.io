@@ -1,0 +1,1364 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>kiki小野猫 - 官方视频门户|原创生活影像品牌</title>
+<meta name="description" content="kiki小野猫官方网站，原创生活影像与城市探索视频品牌，由创作者社区持续运营，呈现真实、温暖、多元的精品内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23222b3a'/%3E%3Ccircle cx='24' cy='30' r='7' fill='%2318d0c8'/%3E%3Ccircle cx='42' cy='30' r='7' fill='%23ff7a59'/%3E%3Cpath d='M20 44c6 6 18 6 24 0' stroke='%23ffd166' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --kx-ink:#1c2333;
+    --kx-ink-soft:#3a4358;
+    --kx-muted:#6b7488;
+    --kx-line:#e3e7ef;
+    --kx-bg:#f6f8fb;
+    --kx-card:#ffffff;
+    --kx-teal:#12b5ab;
+    --kx-teal-dark:#0a8a82;
+    --kx-coral:#ff7a59;
+    --kx-amber:#ffc857;
+    --kx-violet:#7a6cf0;
+    --kx-radius:16px;
+    --kx-shadow:0 10px 30px rgba(28,35,51,.08);
+    --kx-shadow-hover:0 18px 44px rgba(28,35,51,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;scroll-padding-top:118px;}
+  body{
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,sans-serif;
+    background:var(--kx-bg);
+    color:var(--kx-ink);
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  ul,ol{list-style:none;}
+  button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+  input{font-family:inherit;}
+
+  .kx-shell{width:min(1180px,92vw);margin:0 auto;}
+
+  /* ---------- sticky wrapper: notice + header ---------- */
+  .kx-sticky-top{
+    position:sticky;top:0;z-index:80;
+    box-shadow:0 2px 16px rgba(28,35,51,.06);
+  }
+  .kx-notice-bar{
+    background:linear-gradient(90deg,#1c2333,#2b3550 55%,#0f6b66);
+    color:#eaf6f5;
+    font-size:13px;
+    letter-spacing:.2px;
+  }
+  .kx-notice-bar .kx-shell{
+    display:flex;align-items:center;gap:12px;
+    min-height:38px;padding:6px 0;flex-wrap:wrap;
+  }
+  .kx-notice-tag{
+    flex:0 0 auto;
+    background:var(--kx-teal);
+    color:#04211f;
+    font-weight:700;
+    font-size:11px;
+    padding:2px 9px;
+    border-radius:20px;
+    letter-spacing:1px;
+  }
+  .kx-notice-list{display:flex;gap:22px;flex-wrap:wrap;overflow:hidden;}
+  .kx-notice-list li{white-space:nowrap;opacity:.94;}
+  .kx-notice-list li span{color:var(--kx-amber);font-weight:600;margin-right:6px;}
+
+  /* ---------- header ---------- */
+  .kx-header{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--kx-line);}
+  .kx-header-inner{
+    display:flex;align-items:center;gap:22px;
+    min-height:72px;
+  }
+  .kx-brand{display:flex;align-items:center;gap:11px;flex:0 0 auto;}
+  .kx-brand-mark{
+    width:42px;height:42px;border-radius:13px;
+    background:linear-gradient(135deg,var(--kx-teal),var(--kx-violet));
+    display:grid;place-items:center;
+    font-weight:800;color:#fff;font-size:18px;letter-spacing:-.5px;
+    box-shadow:0 6px 16px rgba(18,181,171,.35);
+  }
+  .kx-brand-name{font-size:19px;font-weight:800;letter-spacing:.2px;line-height:1.2;}
+  .kx-brand-name small{display:block;font-size:10.5px;color:var(--kx-muted);font-weight:600;letter-spacing:2px;}
+  .kx-nav{display:flex;gap:4px;margin-left:8px;flex:1 1 auto;}
+  .kx-nav a{
+    padding:9px 13px;border-radius:10px;font-size:14.5px;font-weight:600;color:var(--kx-ink-soft);
+    transition:.2s;
+  }
+  .kx-nav a:hover,.kx-nav a.kx-current{background:#eef9f8;color:var(--kx-teal-dark);}
+  .kx-search{
+    display:flex;align-items:center;gap:8px;
+    background:#f1f4f9;border:1px solid transparent;border-radius:12px;
+    padding:7px 10px 7px 14px;min-width:220px;transition:.2s;
+  }
+  .kx-search:focus-within{border-color:var(--kx-teal);background:#fff;box-shadow:0 0 0 4px rgba(18,181,171,.12);}
+  .kx-search input{border:none;outline:none;background:none;font-size:14px;width:100%;color:var(--kx-ink);}
+  .kx-search button{
+    flex:0 0 auto;background:var(--kx-teal);color:#fff;border-radius:8px;
+    padding:5px 12px;font-size:13px;font-weight:700;
+  }
+  .kx-search-msg{font-size:12px;color:var(--kx-teal-dark);margin-left:4px;display:none;}
+  .kx-header-cta{
+    flex:0 0 auto;background:var(--kx-ink);color:#fff;
+    padding:10px 18px;border-radius:12px;font-size:14px;font-weight:700;transition:.2s;
+  }
+  .kx-header-cta:hover{background:var(--kx-teal-dark);transform:translateY(-1px);}
+  .kx-burger{
+    display:none;width:42px;height:42px;border-radius:12px;background:#eef2f8;
+    place-items:center;flex:0 0 auto;
+  }
+  .kx-burger span{display:block;width:18px;height:2px;background:var(--kx-ink);margin:3.5px 0;border-radius:2px;transition:.25s;}
+
+  /* ---------- hero ---------- */
+  .kx-hero{padding:56px 0 20px;position:relative;overflow:hidden;}
+  .kx-hero::before{
+    content:"";position:absolute;inset:0;
+    background:
+      radial-gradient(680px 340px at 88% -8%,rgba(122,108,240,.16),transparent 70%),
+      radial-gradient(520px 300px at 2% 8%,rgba(18,181,171,.14),transparent 70%);
+    pointer-events:none;
+  }
+  .kx-hero-inner{
+    position:relative;display:grid;grid-template-columns:1.06fr .94fr;gap:52px;align-items:center;
+  }
+  .kx-hero-badge{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid var(--kx-line);border-radius:30px;
+    padding:6px 15px;font-size:12.5px;font-weight:700;color:var(--kx-teal-dark);
+    box-shadow:0 4px 14px rgba(28,35,51,.05);
+  }
+  .kx-hero-badge i{width:7px;height:7px;border-radius:50%;background:var(--kx-teal);display:inline-block;animation:kxPulse 1.8s infinite;}
+  @keyframes kxPulse{0%,100%{box-shadow:0 0 0 0 rgba(18,181,171,.5);}50%{box-shadow:0 0 0 6px rgba(18,181,171,0);}}
+  .kx-hero h1{
+    font-size:clamp(34px,4.4vw,52px);line-height:1.16;letter-spacing:-1px;margin:18px 0 6px;font-weight:900;
+  }
+  .kx-hero h1 em{
+    font-style:normal;
+    background:linear-gradient(100deg,var(--kx-teal),var(--kx-violet) 70%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .kx-hero-slogan{font-size:18px;font-weight:700;color:var(--kx-ink-soft);margin-bottom:14px;}
+  .kx-hero-desc{color:var(--kx-muted);font-size:15.5px;max-width:560px;}
+  .kx-hero-desc b{color:var(--kx-ink);}
+  .kx-hero-actions{display:flex;gap:14px;margin:26px 0 30px;flex-wrap:wrap;}
+  .kx-btn{
+    display:inline-flex;align-items:center;gap:9px;padding:12px 24px;border-radius:13px;
+    font-size:15px;font-weight:700;transition:.22s;
+  }
+  .kx-btn-primary{background:linear-gradient(120deg,var(--kx-teal),#0e9c93);color:#fff;box-shadow:0 10px 24px rgba(18,181,171,.34);}
+  .kx-btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(18,181,171,.42);}
+  .kx-btn-ghost{background:#fff;border:1.5px solid var(--kx-line);color:var(--kx-ink);}
+  .kx-btn-ghost:hover{border-color:var(--kx-teal);color:var(--kx-teal-dark);}
+  .kx-hero-stats{display:flex;gap:34px;flex-wrap:wrap;}
+  .kx-hero-stats div strong{display:block;font-size:26px;font-weight:900;letter-spacing:-.5px;color:var(--kx-ink);}
+  .kx-hero-stats div span{font-size:12.5px;color:var(--kx-muted);font-weight:600;letter-spacing:.5px;}
+
+  .kx-hero-visual{position:relative;}
+  .kx-hero-frame{
+    border-radius:24px;overflow:hidden;box-shadow:0 26px 60px rgba(28,35,51,.2);
+    border:5px solid #fff;position:relative;background:#0f1626;
+  }
+  .kx-hero-frame img{width:100%;aspect-ratio:16/11;object-fit:cover;}
+  .kx-play-float{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);
+    width:74px;height:74px;border-radius:50%;
+    background:rgba(255,255,255,.92);display:grid;place-items:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.28);transition:.25s;
+  }
+  .kx-hero-frame:hover .kx-play-float{transform:translate(-50%,-50%) scale(1.08);}
+  .kx-play-float svg{width:26px;height:26px;margin-left:4px;}
+  .kx-hero-frame-tag{
+    position:absolute;left:16px;top:16px;background:rgba(12,20,32,.72);color:#fff;
+    font-size:12px;font-weight:700;padding:5px 12px;border-radius:20px;letter-spacing:.5px;
+    backdrop-filter:blur(4px);
+  }
+  .kx-hero-frame-cap{
+    position:absolute;left:0;right:0;bottom:0;padding:34px 18px 16px;color:#fff;
+    background:linear-gradient(to top,rgba(8,14,24,.9),transparent);
+    font-size:14.5px;font-weight:700;
+  }
+  .kx-float-card{
+    position:absolute;right:-16px;bottom:-26px;background:#fff;border-radius:16px;
+    padding:13px 16px;box-shadow:var(--kx-shadow-hover);display:flex;align-items:center;gap:11px;
+    border:1px solid var(--kx-line);min-width:200px;
+  }
+  .kx-float-avatar{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--kx-coral),var(--kx-amber));display:grid;place-items:center;color:#fff;font-weight:800;font-size:15px;}
+  .kx-float-card p{font-size:12.5px;font-weight:700;line-height:1.4;}
+  .kx-float-card p small{display:block;color:var(--kx-muted);font-weight:600;font-size:11px;}
+
+  /* ---------- section base ---------- */
+  .kx-section{padding:66px 0;}
+  .kx-section-alt{background:#fff;}
+  .kx-section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:34px;flex-wrap:wrap;}
+  .kx-section-eyebrow{
+    font-size:12px;font-weight:800;letter-spacing:3px;color:var(--kx-teal-dark);text-transform:uppercase;margin-bottom:8px;
+  }
+  .kx-section-head h2{font-size:clamp(24px,3vw,32px);font-weight:900;letter-spacing:-.5px;line-height:1.3;}
+  .kx-section-head p{color:var(--kx-muted);font-size:14.5px;max-width:520px;margin-top:8px;}
+  .kx-section-link{font-size:14px;font-weight:700;color:var(--kx-teal-dark);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;}
+  .kx-section-link:hover{gap:10px;}
+
+  /* ---------- about / deep dive ---------- */
+  .kx-about-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:start;}
+  .kx-about-text p{color:var(--kx-ink-soft);font-size:15.5px;margin-bottom:18px;}
+  .kx-about-text p b{color:var(--kx-teal-dark);}
+  .kx-about-side{display:grid;gap:16px;}
+  .kx-fact-card{
+    background:#fff;border:1px solid var(--kx-line);border-radius:var(--kx-radius);
+    padding:20px 22px;box-shadow:var(--kx-shadow);
+  }
+  .kx-section-alt .kx-fact-card{background:var(--kx-bg);box-shadow:none;}
+  .kx-fact-card h3{font-size:15.5px;font-weight:800;margin-bottom:8px;display:flex;align-items:center;gap:8px;}
+  .kx-fact-card h3 i{width:9px;height:9px;border-radius:3px;background:var(--kx-coral);display:inline-block;transform:rotate(45deg);}
+  .kx-fact-card p{font-size:13.5px;color:var(--kx-muted);}
+  .kx-tag-row{display:flex;flex-wrap:wrap;gap:9px;margin-top:6px;}
+  .kx-tag{
+    background:#eef9f8;color:var(--kx-teal-dark);font-size:12.5px;font-weight:700;
+    padding:5px 13px;border-radius:20px;border:1px solid #d5f2ef;
+  }
+
+  /* ---------- videos ---------- */
+  .kx-video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;}
+  .kx-video-card{
+    background:var(--kx-card);border-radius:var(--kx-radius);overflow:hidden;
+    border:1px solid var(--kx-line);box-shadow:var(--kx-shadow);transition:.28s;display:flex;flex-direction:column;
+  }
+  .kx-video-card:hover{transform:translateY(-6px);box-shadow:var(--kx-shadow-hover);border-color:#cfe9e6;}
+  .kx-video-cover{position:relative;overflow:hidden;background:#0f1626;}
+  .kx-video-cover img{width:100%;aspect-ratio:16/9;object-fit:cover;transition:.5s;}
+  .kx-video-card:hover .kx-video-cover img{transform:scale(1.06);}
+  .kx-cover-shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,14,24,.55),transparent 55%);}
+  .kx-cover-badge{
+    position:absolute;left:12px;top:12px;background:rgba(255,255,255,.94);color:var(--kx-ink);
+    font-size:11.5px;font-weight:800;padding:3px 10px;border-radius:16px;letter-spacing:.3px;
+  }
+  .kx-cover-dur{
+    position:absolute;right:12px;bottom:12px;background:rgba(9,15,26,.8);color:#fff;
+    font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;
+  }
+  .kx-cover-mini-play{
+    position:absolute;left:50%;top:50%;transform:translate(-50%,-50%) scale(.9);
+    width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.9);
+    display:grid;place-items:center;opacity:0;transition:.28s;
+  }
+  .kx-video-card:hover .kx-cover-mini-play{opacity:1;transform:translate(-50%,-50%) scale(1);}
+  .kx-cover-mini-play svg{width:18px;height:18px;margin-left:2px;}
+  .kx-video-body{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1;}
+  .kx-video-body h3{font-size:16px;font-weight:800;line-height:1.45;}
+  .kx-video-body h3 a:hover{color:var(--kx-teal-dark);}
+  .kx-video-body p{font-size:13px;color:var(--kx-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;}
+  .kx-video-tags{display:flex;flex-wrap:wrap;gap:6px;}
+  .kx-video-tags span{font-size:11.5px;font-weight:700;color:var(--kx-violet);background:#f2f0fe;padding:2px 9px;border-radius:12px;}
+  .kx-video-meta{
+    margin-top:auto;padding-top:12px;border-top:1px dashed var(--kx-line);
+    display:flex;align-items:center;gap:9px;flex-wrap:wrap;
+  }
+  .kx-mini-avatar{
+    width:28px;height:28px;border-radius:50%;display:grid;place-items:center;color:#fff;
+    font-size:12px;font-weight:800;flex:0 0 auto;
+  }
+  .kx-video-meta .kx-author-name{font-size:12.5px;font-weight:700;color:var(--kx-ink-soft);}
+  .kx-video-meta .kx-views{font-size:12px;color:var(--kx-muted);margin-left:auto;}
+  .kx-video-actions{display:flex;gap:8px;margin-top:10px;}
+  .kx-act-btn{
+    display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:700;color:var(--kx-muted);
+    background:#f4f6fa;border-radius:9px;padding:6px 11px;transition:.2s;
+  }
+  .kx-act-btn:hover{background:#e9f6f5;color:var(--kx-teal-dark);}
+  .kx-act-btn.kx-liked{background:#fdeee9;color:var(--kx-coral);}
+  .kx-act-btn.kx-saved{background:#f2f0fe;color:var(--kx-violet);}
+  .kx-act-btn svg{width:14px;height:14px;}
+
+  /* ---------- featured / topic ---------- */
+  .kx-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .kx-topic-card{
+    position:relative;border-radius:var(--kx-radius);overflow:hidden;min-height:250px;
+    display:flex;flex-direction:column;justify-content:flex-end;
+    box-shadow:var(--kx-shadow);transition:.28s;color:#fff;
+  }
+  .kx-topic-card:hover{transform:translateY(-5px);box-shadow:var(--kx-shadow-hover);}
+  .kx-topic-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;}
+  .kx-topic-card::after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(to top,rgba(8,14,24,.88),rgba(8,14,24,.15) 65%,transparent);}
+  .kx-topic-inner{position:relative;z-index:2;padding:18px 18px 20px;}
+  .kx-topic-status{
+    display:inline-block;font-size:11px;font-weight:800;background:var(--kx-amber);color:#4a3200;
+    padding:2px 9px;border-radius:12px;margin-bottom:8px;letter-spacing:.4px;
+  }
+  .kx-topic-inner h3{font-size:16.5px;font-weight:800;line-height:1.4;margin-bottom:6px;}
+  .kx-topic-inner p{font-size:12.5px;opacity:.86;line-height:1.55;}
+
+  /* ---------- creators ---------- */
+  .kx-creator-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+  .kx-creator-card{
+    background:#fff;border:1px solid var(--kx-line);border-radius:var(--kx-radius);
+    padding:24px 20px;text-align:center;box-shadow:var(--kx-shadow);transition:.28s;position:relative;overflow:hidden;
+  }
+  .kx-section-alt .kx-creator-card{background:var(--kx-bg);box-shadow:none;}
+  .kx-creator-card:hover{transform:translateY(-5px);box-shadow:var(--kx-shadow-hover);border-color:#cfe9e6;}
+  .kx-creator-avatar{
+    width:72px;height:72px;border-radius:24px;margin:0 auto 14px;display:grid;place-items:center;
+    font-size:26px;font-weight:900;color:#fff;box-shadow:0 10px 22px rgba(28,35,51,.18);
+  }
+  .kx-creator-card h3{font-size:16px;font-weight:800;margin-bottom:5px;}
+  .kx-creator-field{font-size:12.5px;font-weight:700;color:var(--kx-teal-dark);margin-bottom:10px;}
+  .kx-creator-card p{font-size:13px;color:var(--kx-muted);line-height:1.65;margin-bottom:14px;min-height:44px;}
+  .kx-creator-nums{display:flex;justify-content:center;gap:20px;font-size:12px;color:var(--kx-muted);border-top:1px dashed var(--kx-line);padding-top:12px;}
+  .kx-creator-nums b{display:block;font-size:14.5px;color:var(--kx-ink);font-weight:800;}
+  .kx-creator-more{
+    margin-top:13px;width:100%;background:#eef9f8;color:var(--kx-teal-dark);
+    font-size:13px;font-weight:800;padding:8px;border-radius:9px;transition:.2s;
+  }
+  .kx-creator-more:hover{background:var(--kx-teal);color:#fff;}
+
+  /* ---------- reviews ---------- */
+  .kx-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .kx-review-card{
+    background:#fff;border:1px solid var(--kx-line);border-radius:var(--kx-radius);
+    padding:22px;box-shadow:var(--kx-shadow);display:flex;flex-direction:column;gap:12px;
+  }
+  .kx-review-top{display:flex;align-items:center;gap:11px;}
+  .kx-review-top .kx-mini-avatar{width:36px;height:36px;font-size:14px;}
+  .kx-review-top strong{font-size:14px;font-weight:800;display:block;line-height:1.3;}
+  .kx-review-top span{font-size:11.5px;color:var(--kx-muted);}
+  .kx-review-stars{color:var(--kx-amber);font-size:13px;letter-spacing:2px;margin-left:auto;}
+  .kx-review-card p{font-size:13.5px;color:var(--kx-ink-soft);line-height:1.7;}
+  .kx-review-card p::before{content:"“";color:var(--kx-teal);font-size:22px;font-weight:900;line-height:0;vertical-align:-4px;margin-right:2px;}
+
+  /* ---------- inspiration ---------- */
+  .kx-inspire-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .kx-inspire-card{
+    background:linear-gradient(150deg,#ffffff,#f2fbfa);
+    border:1px solid #d9f0ee;border-radius:var(--kx-radius);padding:22px;transition:.25s;
+  }
+  .kx-inspire-card:hover{transform:translateY(-4px);box-shadow:var(--kx-shadow);}
+  .kx-inspire-num{font-size:12px;font-weight:900;color:var(--kx-teal);letter-spacing:2px;margin-bottom:8px;}
+  .kx-inspire-card h3{font-size:15.5px;font-weight:800;margin-bottom:8px;}
+  .kx-inspire-card p{font-size:13px;color:var(--kx-muted);margin-bottom:12px;}
+  .kx-inspire-card ul{display:grid;gap:7px;}
+  .kx-inspire-card li{font-size:12.5px;color:var(--kx-ink-soft);padding-left:16px;position:relative;}
+  .kx-inspire-card li::before{content:"→";position:absolute;left:0;color:var(--kx-coral);font-weight:800;}
+
+  /* ---------- news ---------- */
+  .kx-news-list{display:grid;gap:14px;}
+  .kx-news-item{
+    display:flex;align-items:center;gap:18px;background:#fff;border:1px solid var(--kx-line);
+    border-radius:14px;padding:16px 22px;transition:.22s;flex-wrap:wrap;
+  }
+  .kx-section-alt .kx-news-item{background:var(--kx-bg);}
+  .kx-news-item:hover{border-color:var(--kx-teal);transform:translateX(4px);}
+  .kx-news-date{font-size:12.5px;font-weight:800;color:var(--kx-teal-dark);background:#eef9f8;padding:4px 11px;border-radius:8px;flex:0 0 auto;}
+  .kx-news-item h3{font-size:14.5px;font-weight:700;flex:1 1 320px;}
+  .kx-news-item .kx-news-cat{font-size:12px;color:var(--kx-muted);font-weight:600;margin-left:auto;}
+
+  /* ---------- faq ---------- */
+  .kx-faq-wrap{max-width:860px;margin:0 auto;display:grid;gap:12px;}
+  .kx-faq-item{background:#fff;border:1px solid var(--kx-line);border-radius:13px;overflow:hidden;transition:.2s;}
+  .kx-faq-item[open]{border-color:#bfe6e2;box-shadow:0 8px 22px rgba(18,181,171,.1);}
+  .kx-faq-item summary{
+    cursor:pointer;list-style:none;padding:17px 22px;font-size:15px;font-weight:700;
+    display:flex;align-items:center;gap:12px;
+  }
+  .kx-faq-item summary::-webkit-details-marker{display:none;}
+  .kx-faq-item summary::before{content:"＋";color:var(--kx-teal);font-weight:900;font-size:17px;line-height:1;}
+  .kx-faq-item[open] summary::before{content:"－";}
+  .kx-faq-item p{padding:0 22px 18px 51px;font-size:13.5px;color:var(--kx-muted);line-height:1.75;}
+
+  /* ---------- contact ---------- */
+  .kx-contact-wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+    background:linear-gradient(125deg,#1c2333,#25314a 60%,#0f5c58);
+    border-radius:26px;padding:46px 48px;color:#fff;position:relative;overflow:hidden;
+  }
+  .kx-contact-wrap::after{
+    content:"";position:absolute;right:-90px;top:-90px;width:280px;height:280px;border-radius:50%;
+    background:radial-gradient(circle,rgba(18,181,171,.4),transparent 70%);
+  }
+  .kx-contact-info h2{font-size:28px;font-weight:900;margin-bottom:12px;letter-spacing:-.5px;}
+  .kx-contact-info p{font-size:14.5px;opacity:.82;max-width:400px;margin-bottom:20px;}
+  .kx-contact-lines{display:grid;gap:9px;font-size:13.5px;position:relative;z-index:1;}
+  .kx-contact-lines span{opacity:.85;}
+  .kx-contact-lines b{opacity:1;color:var(--kx-amber);margin-right:8px;}
+  .kx-contact-form{position:relative;z-index:1;display:grid;gap:12px;}
+  .kx-contact-form input{
+    background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);border-radius:11px;
+    padding:12px 16px;color:#fff;font-size:14px;outline:none;transition:.2s;
+  }
+  .kx-contact-form input::placeholder{color:rgba(255,255,255,.55);}
+  .kx-contact-form input:focus{border-color:var(--kx-teal);background:rgba(255,255,255,.16);}
+  .kx-contact-form button{
+    background:var(--kx-teal);color:#04211f;font-weight:800;font-size:14.5px;
+    padding:13px;border-radius:11px;transition:.2s;
+  }
+  .kx-contact-form button:hover{background:#3fd6cc;transform:translateY(-2px);}
+
+  /* ---------- footer ---------- */
+  .kx-footer{background:#151b28;color:#9aa4b8;padding:52px 0 26px;font-size:13.5px;}
+  .kx-footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:34px;margin-bottom:34px;}
+  .kx-footer h3{color:#fff;font-size:14.5px;font-weight:800;margin-bottom:14px;}
+  .kx-footer-brand .kx-brand-mark{width:38px;height:38px;font-size:16px;border-radius:11px;}
+  .kx-footer-brand .kx-brand-name{color:#fff;font-size:17px;}
+  .kx-footer-brand .kx-brand-name small{color:#77839b;}
+  .kx-footer-brand p{margin-top:14px;font-size:12.5px;line-height:1.8;max-width:320px;}
+  .kx-footer ul{display:grid;gap:9px;}
+  .kx-footer li a:hover{color:var(--kx-teal);}
+  .kx-footer-bottom{border-top:1px solid #253048;padding-top:20px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12.5px;}
+  .kx-footer-bottom a{color:#9aa4b8;}
+  .kx-footer-bottom a:hover{color:var(--kx-teal);}
+
+  /* ---------- floatings ---------- */
+  .kx-back-top{
+    position:fixed;right:24px;bottom:28px;width:46px;height:46px;border-radius:14px;
+    background:var(--kx-ink);color:#fff;display:grid;place-items:center;z-index:70;
+    opacity:0;visibility:hidden;transform:translateY(12px);transition:.28s;box-shadow:0 10px 26px rgba(28,35,51,.3);
+  }
+  .kx-back-top.kx-show{opacity:1;visibility:visible;transform:translateY(0);}
+  .kx-back-top:hover{background:var(--kx-teal-dark);}
+  .kx-toast{
+    position:fixed;left:50%;bottom:38px;transform:translate(-50%,20px);
+    background:#1c2333;color:#fff;font-size:13.5px;font-weight:700;
+    padding:11px 22px;border-radius:11px;box-shadow:0 14px 34px rgba(0,0,0,.3);
+    opacity:0;visibility:hidden;transition:.28s;z-index:120;max-width:86vw;text-align:center;
+  }
+  .kx-toast.kx-show{opacity:1;visibility:visible;transform:translate(-50%,0);}
+
+  /* modal */
+  .kx-modal-mask{
+    position:fixed;inset:0;background:rgba(12,18,30,.6);backdrop-filter:blur(4px);
+    display:grid;place-items:center;z-index:110;opacity:0;visibility:hidden;transition:.25s;padding:20px;
+  }
+  .kx-modal-mask.kx-show{opacity:1;visibility:visible;}
+  .kx-modal{
+    background:#fff;border-radius:20px;width:min(560px,100%);padding:30px;
+    transform:translateY(16px) scale(.98);transition:.28s;max-height:86vh;overflow:auto;
+  }
+  .kx-modal-mask.kx-show .kx-modal{transform:none;}
+  .kx-modal h3{font-size:20px;font-weight:900;margin-bottom:6px;}
+  .kx-modal .kx-modal-sub{font-size:13px;color:var(--kx-muted);margin-bottom:20px;}
+  .kx-modal-close{
+    float:right;width:32px;height:32px;border-radius:9px;background:#f1f4f9;
+    font-size:17px;font-weight:700;color:var(--kx-muted);display:grid;place-items:center;
+  }
+  .kx-modal-close:hover{background:#e6ebf3;color:var(--kx-ink);}
+  .kx-modal-body p{font-size:14px;color:var(--kx-ink-soft);margin-bottom:14px;}
+  .kx-modal-body .kx-tag-row{margin-bottom:14px;}
+  .kx-modal-field{display:grid;gap:10px;margin-top:6px;}
+  .kx-modal-field input,.kx-modal-field textarea{
+    border:1px solid var(--kx-line);border-radius:11px;padding:11px 14px;font-size:14px;outline:none;transition:.2s;resize:vertical;
+  }
+  .kx-modal-field input:focus,.kx-modal-field textarea:focus{border-color:var(--kx-teal);box-shadow:0 0 0 4px rgba(18,181,171,.12);}
+  .kx-modal-submit{background:var(--kx-teal);color:#fff;font-weight:800;padding:12px;border-radius:11px;font-size:14.5px;transition:.2s;}
+  .kx-modal-submit:hover{background:var(--kx-teal-dark);}
+
+  /* responsive */
+  @media (max-width:1080px){
+    .kx-hero-inner{grid-template-columns:1fr;gap:44px;}
+    .kx-hero-visual{max-width:640px;}
+    .kx-about-grid{grid-template-columns:1fr;gap:28px;}
+    .kx-video-grid{grid-template-columns:repeat(2,1fr);}
+    .kx-topic-grid{grid-template-columns:repeat(2,1fr);}
+    .kx-creator-grid{grid-template-columns:repeat(2,1fr);}
+    .kx-review-grid{grid-template-columns:repeat(2,1fr);}
+    .kx-inspire-grid{grid-template-columns:repeat(2,1fr);}
+    .kx-footer-grid{grid-template-columns:1fr 1fr;}
+    .kx-search{display:none;}
+    .kx-header-cta{display:none;}
+    .kx-burger{display:grid;margin-left:auto;}
+    .kx-nav{
+      position:absolute;left:0;right:0;top:100%;background:#fff;flex-direction:column;
+      padding:10px 4vw 18px;gap:4px;border-bottom:1px solid var(--kx-line);
+      box-shadow:0 16px 30px rgba(28,35,51,.1);
+      display:none;
+    }
+    .kx-nav.kx-open{display:flex;}
+    .kx-header{position:relative;}
+  }
+  @media (max-width:720px){
+    .kx-notice-list li:nth-child(n+2){display:none;}
+    .kx-video-grid,.kx-topic-grid,.kx-creator-grid,.kx-review-grid,.kx-inspire-grid{grid-template-columns:1fr;}
+    .kx-contact-wrap{grid-template-columns:1fr;padding:32px 24px;gap:26px;}
+    .kx-footer-grid{grid-template-columns:1fr;gap:24px;}
+    .kx-hero-stats{gap:22px;}
+    .kx-float-card{right:6px;bottom:-20px;}
+    .kx-section{padding:48px 0;}
+    .kx-news-item .kx-news-cat{margin-left:0;}
+    .kx-faq-item p{padding-left:22px;}
+  }
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- ===== sticky notice + header ===== -->
+<div class="kx-sticky-top">
+  <div class="kx-notice-bar">
+    <div class="kx-shell">
+      <span class="kx-notice-tag">官方发布</span>
+      <ul class="kx-notice-list">
+        <li><span>11-18</span>《城市夜行记》第三季正式上线，首集走进老城区的深夜食堂</li>
+        <li><span>11-16</span>「冬日影像挑战」报名开启，投稿通道持续至12月20日</li>
+        <li><span>11-12</span>创作者扶持计划2.0发布：新增原创短片剧本工坊单元</li>
+        <li><span>11-08</span>官网会员中心升级，支持作品合集收藏与下载清单管理</li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="kx-header">
+    <div class="kx-shell kx-header-inner">
+      <a href="#kx-home" class="kx-brand">
+        <span class="kx-brand-mark">Ki</span>
+        <span class="kx-brand-name">kiki小野猫<small>LIFE VIDEO STUDIO</small></span>
+      </a>
+      <nav class="kx-nav" id="kxNav" aria-label="主导航">
+        <a href="#kx-home" class="kx-current">首页</a>
+        <a href="#kx-videos">视频焦点</a>
+        <a href="#kx-topics">专题企划</a>
+        <a href="#kx-creators">创作者</a>
+        <a href="#kx-stories">品牌故事</a>
+        <a href="#kx-news">企业动态</a>
+        <a href="#kx-contact">联系我们</a>
+      </nav>
+      <form class="kx-search" id="kxSearchForm" role="search">
+        <input type="search" id="kxSearchInput" placeholder="搜索视频、专题、创作者" aria-label="站内搜索">
+        <button type="submit">搜索</button>
+      </form>
+      <a href="#kx-contact" class="kx-header-cta">投稿入口</a>
+      <button class="kx-burger" id="kxBurger" aria-label="展开导航" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<!-- ===== hero ===== -->
+<section class="kx-hero" id="kx-home">
+  <div class="kx-shell kx-hero-inner">
+    <div>
+      <span class="kx-hero-badge"><i></i>kiki小野猫 官方网站 · 持续运营第 6 年</span>
+      <h1>kiki小野猫<em>影像生活品牌官网</em></h1>
+      <p class="kx-hero-slogan">把日常拍成值得反复看的故事</p>
+      <p class="kx-hero-desc">
+        作为深耕生活影像垂直领域的<b>原创视频品牌</b>，kiki小野猫以真实、温暖、多元为底色，记录城市、手艺与人的细微时刻。
+        我们为创作者搭建高品质内容生态，也为企业提供值得信赖的品牌影像服务。
+      </p>
+      <div class="kx-hero-actions">
+        <a href="#kx-videos" class="kx-btn kx-btn-primary">
+          浏览焦点视频
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#kx-stories" class="kx-btn kx-btn-ghost">了解品牌故事</a>
+      </div>
+      <div class="kx-hero-stats">
+        <div><strong data-kx-count="1860">1860</strong><span>原创视频作品</span></div>
+        <div><strong data-kx-count="42">42</strong><span>签约创作者</span></div>
+        <div><strong data-kx-count="98">98</strong><span>内容满意度（%）</span></div>
+      </div>
+    </div>
+    <div class="kx-hero-visual">
+      <div class="kx-hero-frame">
+        <span class="kx-hero-frame-tag">本周主推 · 城市夜行记 S03E01</span>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='sky1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%230d1a33'/%3E%3Cstop offset='.55' stop-color='%231f2f52'/%3E%3Cstop offset='1' stop-color='%232c4a6b'/%3E%3C/linearGradient%3E%3ClinearGradient id='glow1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffc857'/%3E%3Cstop offset='1' stop-color='%23ff7a59'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23sky1)'/%3E%3Ccircle cx='640' cy='120' r='52' fill='url(%23glow1)' opacity='.85'/%3E%3Cg fill='%230b1424'%3E%3Crect x='0' y='330' width='130' height='220'/%3E%3Crect x='150' y='270' width='120' height='280'/%3E%3Crect x='300' y='350' width='100' height='200'/%3E%3Crect x='430' y='240' width='140' height='310'/%3E%3Crect x='600' y='300' width='90' height='250'/%3E%3Crect x='710' y='270' width='90' height='280'/%3E%3C/g%3E%3Cg fill='%23ffc857' opacity='.9'%3E%3Crect x='30' y='360' width='14' height='20' rx='2'/%3E%3Crect x='60' y='400' width='14' height='20' rx='2'/%3E%3Crect x='175' y='305' width='14' height='20' rx='2'/%3E%3Crect x='205' y='350' width='14' height='20' rx='2'/%3E%3Crect x='455' y='285' width='14' height='20' rx='2'/%3E%3Crect x='500' y='330' width='14' height='20' rx='2'/%3E%3Crect x='530' y='390' width='14' height='20' rx='2'/%3E%3Crect x='625' y='340' width='14' height='20' rx='2'/%3E%3Crect x='735' y='310' width='14' height='20' rx='2'/%3E%3C/g%3E%3Cpath d='M0 470 Q200 440 400 468 T800 462 V550 H0 Z' fill='%23111a2c'/%3E%3Cg stroke='%2318d0c8' stroke-width='3' opacity='.5' fill='none'%3E%3Cpath d='M120 550 Q160 470 240 470'/%3E%3Cpath d='M520 550 Q560 460 660 452'/%3E%3C/g%3E%3Crect x='340' y='430' width='120' height='60' rx='8' fill='%23ff7a59' opacity='.65'/%3E%3C/svg%3E" alt="城市夜行记第三季首集夜色街景封面">
+        <span class="kx-play-float" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="#1c2333"><path d="M8 5v14l11-7z"/></svg>
+        </span>
+        <div class="kx-hero-frame-cap">深夜食堂里的两位老板，讲了二十年的一碗面</div>
+      </div>
+      <div class="kx-float-card">
+        <span class="kx-float-avatar">野</span>
+        <p>本周新增 3 集<small>创作幕后 · 剪辑手记同步更新</small></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== about / deep dive ===== -->
+<section class="kx-section" id="kx-about">
+  <div class="kx-shell">
+    <div class="kx-section-head">
+      <div>
+        <div class="kx-section-eyebrow">About The Brand</div>
+        <h2>关于 kiki小野猫：一支把生活拍成作品的团队</h2>
+        <p>从一台手持相机与三条街区开始，我们用六年时间建立起一个以原创为核心的生活影像品牌与创作者社区。</p>
+      </div>
+    </div>
+    <div class="kx-about-grid">
+      <div class="kx-about-text">
+        <p>
+          kiki小野猫成立于 2020 年，是一家专注生活影像与城市记录的<b>原创视频品牌</b>。品牌名来自团队早期的一只流浪猫，它总在深夜的巷口出现，安静地看我们架机器、调灯光。
+          我们由此确信：真正打动人的画面，往往来自那些没有台词、也不被安排的时刻。于是品牌从诞生起就确立了一条朴素的准则——先认真生活，再谈拍摄。
+        </p>
+        <p>
+          作为一家以内容驱动企业成长的公司，kiki小野猫官方网站同时承担三个角色：对外是<b>品牌官网</b>与作品档案库，对内是创作者协作中台，对社区则是投稿、投票与比赛报名的入口。
+          我们坚持原创与正版授权，所有上线内容均经过选题会、粗剪审阅与成片品控三道流程，力求在真实质感与专业呈现之间取得平衡。
+          目前品牌已累计制作原创短片 1860 余部，覆盖城市探索、手作工艺、人物访谈、户外活动、萌宠日常与科技前沿等题材，其中《城市夜行记》《一碗面的时间》《下班后的一小时》等系列在用户中形成稳定口碑。
+        </p>
+        <p>
+          我们相信内容生态的价值不在单条爆款，而在持续运营的能力。因此团队把大量精力放在创作者培养上：每月开放一次公开选题会，每季度提供剪辑与叙事工作坊，
+          每年举办一届面向所有注册用户的影像挑战赛。企业与品牌方也可以通过官方渠道发起联合创作，我们会匹配擅长该领域的创作者，从脚本、拍摄到交付形成完整闭环。
+          这种“品牌 + 创作者 + 用户”的三方结构，让 kiki小野猫在细分赛道中保持着温和而稳定的行业影响力。
+        </p>
+        <p>
+          如果你第一次来到 kiki小野猫官网，可以先从焦点视频看起，再进入专题企划理解我们的叙事偏好，最后在创作者页面找到与你气味相投的人。
+          我们不做喧闹的内容工厂，更愿意做一个值得信赖的影像社区：尊重每一位创作者的表达节奏，也尊重每一位观众的时间。
+          在这里，观看不是消耗，而是陪伴；影像不是流量单位，而是一段可以被反复回看的真实生活。
+        </p>
+        <div class="kx-tag-row">
+          <span class="kx-tag">原创正版</span>
+          <span class="kx-tag">高清画质</span>
+          <span class="kx-tag">城市记录</span>
+          <span class="kx-tag">人物访谈</span>
+          <span class="kx-tag">创作者社区</span>
+          <span class="kx-tag">品牌影像服务</span>
+        </div>
+      </div>
+      <aside class="kx-about-side">
+        <div class="kx-fact-card">
+          <h3><i></i>品牌坐标</h3>
+          <p>总部位于杭州，拍摄足迹覆盖全国 27 座城市，长期驻点创作小组 5 个。</p>
+        </div>
+        <div class="kx-fact-card">
+          <h3><i></i>内容准则</h3>
+          <p>真实优先、拒绝摆拍式煽情；尊重受访者意愿；所有素材均获得肖像与场景使用授权。</p>
+        </div>
+        <div class="kx-fact-card">
+          <h3><i></i>企业愿景</h3>
+          <p>成为中国生活影像垂直领域内，创作者最愿意长期停留、用户最愿意反复回访的精品内容平台。</p>
+        </div>
+        <div class="kx-fact-card">
+          <h3><i></i>社会责任</h3>
+          <p>持续参与城市流浪动物记录计划，为本地公益机构提供免费的纪录片拍摄与传播支持。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ===== video focus ===== -->
+<section class="kx-section kx-section-alt" id="kx-videos">
+  <div class="kx-shell">
+    <div class="kx-section-head">
+      <div>
+        <div class="kx-section-eyebrow">Focus Videos</div>
+        <h2>视频焦点 · 本周值得花时间的六部作品</h2>
+        <p>由编辑部与社区共同挑选，兼顾叙事完成度与画面质感，每周四更新。</p>
+      </div>
+      <a href="#kx-topics" class="kx-section-link">全部专题 <span>→</span></a>
+    </div>
+
+    <div class="kx-video-grid" id="kxVideoGrid">
+      <article class="kx-video-card">
+        <div class="kx-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f6e7c8'/%3E%3Ccircle cx='500' cy='90' r='58' fill='%23ffb74d' opacity='.55'/%3E%3Crect x='0' y='250' width='640' height='110' fill='%23d9a86c'/%3E%3Cg fill='%238d5b32'%3E%3Crect x='70' y='180' width='120' height='70' rx='6'/%3E%3Crect x='230' y='200' width='150' height='50' rx='6'/%3E%3Crect x='420' y='170' width='100' height='80' rx='6'/%3E%3C/g%3E%3Cg fill='%23fff8e8'%3E%3Ccircle cx='120' cy='205' r='14'/%3E%3Ccircle cx='270' cy='218' r='11'/%3E%3Ccircle cx='460' cy='200' r='13'/%3E%3C/g%3E%3Cpath d='M0 290 Q160 265 320 292 T640 286 V360 H0 Z' fill='%23b87c47' opacity='.6'/%3E%3C/svg%3E" alt="一碗面的时间里老面馆后厨清晨蒸汽">
+          <div class="kx-cover-shade"></div>
+          <span class="kx-cover-badge">人物访谈</span>
+          <span class="kx-cover-dur">18:42</span>
+          <span class="kx-cover-mini-play"><svg viewBox="0 0 24 24" fill="#1c2333"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="kx-video-body">
+          <h3>一碗面的时间：老城区面馆的二十年灶火</h3>
+          <p>凌晨四点半备料，六点开门。我们跟拍了三天，把两位老板的沉默也剪进了片子。</p>
+          <div class="kx-video-tags"><span>城市探索</span><span>人物访谈</span></div>
+          <div class="kx-video-meta">
+            <span class="kx-mini-avatar" style="background:#e2703a">陈</span>
+            <span class="kx-author-name">陈拾光影</span>
+            <span class="kx-views">12.6 万次播放</span>
+          </div>
+          <div class="kx-video-actions">
+            <button class="kx-act-btn kx-like-btn" data-kx-count="2041"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.4 12 20 12 20z"/></svg><b class="kx-like-num">2041</b></button>
+            <button class="kx-act-btn kx-save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v16l-6-4-6 4z"/></svg>收藏</button>
+            <button class="kx-act-btn kx-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="kx-video-card">
+        <div class="kx-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23142b3a'/%3E%3Cg stroke='%2318d0c8' stroke-width='2' opacity='.6' fill='none'%3E%3Cpath d='M0 300 Q160 250 320 300 T640 290'/%3E%3Cpath d='M0 260 Q160 210 320 260 T640 250'/%3E%3C/g%3E%3Ccircle cx='150' cy='100' r='40' fill='%23ff7a59' opacity='.7'/%3E%3Crect x='220' y='140' width='260' height='110' rx='10' fill='%230e1f2c' stroke='%2318d0c8' stroke-width='2'/%3E%3Crect x='245' y='165' width='80' height='10' rx='5' fill='%2318d0c8' opacity='.7'/%3E%3Crect x='245' y='190' width='140' height='10' rx='5' fill='%23ff7a59' opacity='.6'/%3E%3Crect x='245' y='215' width='110' height='10' rx='5' fill='%23ffc857' opacity='.6'/%3E%3C/svg%3E" alt="下班后的一小时城市通勤与夜跑灯光封面">
+          <div class="kx-cover-shade"></div>
+          <span class="kx-cover-badge">日常记录</span>
+          <span class="kx-cover-dur">09:15</span>
+          <span class="kx-cover-mini-play"><svg viewBox="0 0 24 24" fill="#1c2333"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="kx-video-body">
+          <h3>下班后的一小时：五个普通人的夜晚路线</h3>
+          <p>有人骑车去江边，有人在便利店写日记。我们把镜头交给他们自己。</p>
+          <div class="kx-video-tags"><span>生活方式</span><span>日常记录</span></div>
+          <div class="kx-video-meta">
+            <span class="kx-mini-avatar" style="background:#12b5ab">林</span>
+            <span class="kx-author-name">林一可</span>
+            <span class="kx-views">9.3 万次播放</span>
+          </div>
+          <div class="kx-video-actions">
+            <button class="kx-act-btn kx-like-btn" data-kx-count="1588"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.4 12 20 12 20z"/></svg><b class="kx-like-num">1588</b></button>
+            <button class="kx-act-btn kx-save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v16l-6-4-6 4z"/></svg>收藏</button>
+            <button class="kx-act-btn kx-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="kx-video-card">
+        <div class="kx-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23eaf4ef'/%3E%3Ccircle cx='120' cy='90' r='46' fill='%2389c9a8' opacity='.6'/%3E%3Cpath d='M0 300 Q140 240 300 300 T640 288 V360 H0 Z' fill='%236ba37f' opacity='.4'/%3E%3Cg fill='%234a7a5e'%3E%3Crect x='380' y='150' width='22' height='130' rx='4'/%3E%3Crect x='470' y='185' width='18' height='95' rx='4'/%3E%3C/g%3E%3Cg fill='%23f0b429'%3E%3Ccircle cx='391' cy='140' r='18'/%3E%3Ccircle cx='479' cy='176' r='14'/%3E%3C/g%3E%3Cpath d='M150 260 q30 -80 60 0 q-30 26 -60 0' fill='%23c9dfd2'/%3E%3C/svg%3E" alt="手作器物从揉泥到出窑的陶艺制作封面">
+          <div class="kx-cover-shade"></div>
+          <span class="kx-cover-badge">手作DIY</span>
+          <span class="kx-cover-dur">22:08</span>
+          <span class="kx-cover-mini-play"><svg viewBox="0 0 24 24" fill="#1c2333"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="kx-video-body">
+          <h3>手作器物：拉坯机前的三十二次失败</h3>
+          <p>一个非科班出身的年轻人，用八个月把工作台搬进了老窑厂。失败比成品更好看。</p>
+          <div class="kx-video-tags"><span>手作DIY</span><span>创作幕后</span></div>
+          <div class="kx-video-meta">
+            <span class="kx-mini-avatar" style="background:#7a6cf0">苏</span>
+            <span class="kx-author-name">苏木手记</span>
+            <span class="kx-views">7.8 万次播放</span>
+          </div>
+          <div class="kx-video-actions">
+            <button class="kx-act-btn kx-like-btn" data-kx-count="1264"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.4 12 20 12 20z"/></svg><b class="kx-like-num">1264</b></button>
+            <button class="kx-act-btn kx-save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v16l-6-4-6 4z"/></svg>收藏</button>
+            <button class="kx-act-btn kx-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="kx-video-card">
+        <div class="kx-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23f2f0fe'/%3E%3Ccircle cx='520' cy='80' r='62' fill='%237a6cf0' opacity='.28'/%3E%3Crect x='70' y='120' width='180' height='120' rx='14' fill='%23ffffff' stroke='%237a6cf0' stroke-width='2'/%3E%3Crect x='95' y='145' width='90' height='9' rx='4' fill='%237a6cf0' opacity='.55'/%3E%3Crect x='95' y='170' width='130' height='9' rx='4' fill='%23c3bcf8'/%3E%3Crect x='95' y='195' width='70' height='9' rx='4' fill='%23c3bcf8'/%3E%3Ccircle cx='400' cy='200' r='52' fill='%23ffd6c9'/%3E%3Ccircle cx='382' cy='190' r='6' fill='%23222b3a'/%3E%3Ccircle cx='418' cy='190' r='6' fill='%23222b3a'/%3E%3Cpath d='M384 216 q16 14 32 0' stroke='%23222b3a' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" alt="萌宠日常里橘猫与窗台阳光的封面">
+          <div class="kx-cover-shade"></div>
+          <span class="kx-cover-badge">萌宠日常</span>
+          <span class="kx-cover-dur">06:31</span>
+          <span class="kx-cover-mini-play"><svg viewBox="0 0 24 24" fill="#1c2333"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="kx-video-body">
+          <h3>萌宠日常：一只橘猫和它固定的三个午睡点</h3>
+          <p>没有剧情，没有配乐，只有窗台的阳光从东边挪到西边。看完心情会变好。</p>
+          <div class="kx-video-tags"><span>萌宠日常</span><span>治愈影像</span></div>
+          <div class="kx-video-meta">
+            <span class="kx-mini-avatar" style="background:#ff7a59">阿</span>
+            <span class="kx-author-name">阿团日记</span>
+            <span class="kx-views">15.2 万次播放</span>
+          </div>
+          <div class="kx-video-actions">
+            <button class="kx-act-btn kx-like-btn" data-kx-count="3120"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.4 12 20 12 20z"/></svg><b class="kx-like-num">3120</b></button>
+            <button class="kx-act-btn kx-save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v16l-6-4-6 4z"/></svg>收藏</button>
+            <button class="kx-act-btn kx-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="kx-video-card">
+        <div class="kx-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%231b2b2a'/%3E%3Cg stroke='%234fd1c5' stroke-width='1.6' fill='none' opacity='.7'%3E%3Cpath d='M60 300 L110 210 L170 260 L240 150 L320 220 L390 120 L470 200 L560 130'/%3E%3C/g%3E%3Cg fill='%234fd1c5'%3E%3Ccircle cx='110' cy='210' r='5'/%3E%3Ccircle cx='240' cy='150' r='5'/%3E%3Ccircle cx='390' cy='120' r='5'/%3E%3Ccircle cx='560' cy='130' r='5'/%3E%3C/g%3E%3Crect x='420' y='230' width='150' height='90' rx='10' fill='%230f1e1d' stroke='%234fd1c5' stroke-width='2'/%3E%3Crect x='440' y='250' width='60' height='8' rx='4' fill='%234fd1c5' opacity='.6'/%3E%3Crect x='440' y='270' width='100' height='8' rx='4' fill='%23ffc857' opacity='.6'/%3E%3C/svg%3E" alt="科技前沿浅谈家用影像设备选购封面">
+          <div class="kx-cover-shade"></div>
+          <span class="kx-cover-badge">深度测评</span>
+          <span class="kx-cover-dur">14:05</span>
+          <span class="kx-cover-mini-play"><svg viewBox="0 0 24 24" fill="#1c2333"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="kx-video-body">
+          <h3>科技前沿：三千元档影像设备，普通人该买哪台</h3>
+          <p>不堆参数，只回到实际拍摄场景：室内、逆光、手持跟拍和夜间收音。</p>
+          <div class="kx-video-tags"><span>科技前沿</span><span>深度测评</span></div>
+          <div class="kx-video-meta">
+            <span class="kx-mini-avatar" style="background:#3a6d81">周</span>
+            <span class="kx-author-name">周像素</span>
+            <span class="kx-views">6.4 万次播放</span>
+          </div>
+          <div class="kx-video-actions">
+            <button class="kx-act-btn kx-like-btn" data-kx-count="986"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.4 12 20 12 20z"/></svg><b class="kx-like-num">986</b></button>
+            <button class="kx-act-btn kx-save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v16l-6-4-6 4z"/></svg>收藏</button>
+            <button class="kx-act-btn kx-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="kx-video-card">
+        <div class="kx-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Crect width='640' height='360' fill='%23dfe8f3'/%3E%3Cpath d='M0 250 L160 160 L320 230 L480 150 L640 220 V360 H0 Z' fill='%238fa9c7' opacity='.6'/%3E%3Cpath d='M0 300 L140 220 L300 280 L470 205 L640 270 V360 H0 Z' fill='%234a6688' opacity='.55'/%3E%3Ccircle cx='520' cy='80' r='40' fill='%23ffd166' opacity='.9'/%3E%3Cg stroke='%23ffffff' stroke-width='3' fill='none' opacity='.7'%3E%3Cpath d='M120 120 q20 -14 40 0'/%3E%3Cpath d='M180 100 q16 -12 32 0'/%3E%3C/g%3E%3C/svg%3E" alt="户外活动周末徒步山脊线日出封面">
+          <div class="kx-cover-shade"></div>
+          <span class="kx-cover-badge">户外活动</span>
+          <span class="kx-cover-dur">16:20</span>
+          <span class="kx-cover-mini-play"><svg viewBox="0 0 24 24" fill="#1c2333"><path d="M8 5v14l11-7z"/></svg></span>
+        </div>
+        <div class="kx-video-body">
+          <h3>户外活动：周末五点出发，去看山脊线上的日出</h3>
+          <p>四位朋友，两顶帐篷，一条走错的路。攻略部分在片尾，含装备清单与避坑提醒。</p>
+          <div class="kx-video-tags"><span>户外活动</span><span>旅行见闻</span></div>
+          <div class="kx-video-meta">
+            <span class="kx-mini-avatar" style="background:#f0a63a">麦</span>
+            <span class="kx-author-name">麦穗向北</span>
+            <span class="kx-views">11.1 万次播放</span>
+          </div>
+          <div class="kx-video-actions">
+            <button class="kx-act-btn kx-like-btn" data-kx-count="1755"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20s-7-4.6-7-9.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 15.4 12 20 12 20z"/></svg><b class="kx-like-num">1755</b></button>
+            <button class="kx-act-btn kx-save-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 4h12v16l-6-4-6 4z"/></svg>收藏</button>
+            <button class="kx-act-btn kx-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== topics ===== -->
+<section class="kx-section" id="kx-topics">
+  <div class="kx-shell">
+    <div class="kx-section-head">
+      <div>
+        <div class="kx-section-eyebrow">Special Projects</div>
+        <h2>专题企划 · 我们正在持续更新的长线叙事</h2>
+        <p>每个专题都是一条持续生长的内容线，欢迎在专题页投票决定下一集拍什么。</p>
+      </div>
+      <a href="#kx-news" class="kx-section-link">企划进度 <span>→</span></a>
+    </div>
+    <div class="kx-topic-grid">
+      <article class="kx-topic-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23121f33'/%3E%3Ccircle cx='300' cy='90' r='48' fill='%23ffc857' opacity='.85'/%3E%3Cg fill='%230b1524'%3E%3Crect x='20' y='220' width='80' height='180'/%3E%3Crect x='120' y='170' width='70' height='230'/%3E%3Crect x='210' y='250' width='90' height='150'/%3E%3Crect x='320' y='200' width='60' height='200'/%3E%3C/g%3E%3Cg fill='%23ff7a59' opacity='.7'%3E%3Crect x='40' y='250' width='10' height='14'/%3E%3Crect x='140' y='200' width='10' height='14'/%3E%3Crect x='240' y='280' width='10' height='14'/%3E%3C/g%3E%3C/svg%3E" alt="城市夜行记专题第三季夜街封面">
+        <div class="kx-topic-inner">
+          <span class="kx-topic-status">更新至 E04</span>
+          <h3>城市夜行记 · 第三季</h3>
+          <p>在熄灯之后重新认识一座城，十二集，十二种夜色。</p>
+        </div>
+      </article>
+      <article class="kx-topic-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23f4e6d2'/%3E%3Ccircle cx='120' cy='120' r='70' fill='%23e0a35e' opacity='.6'/%3E%3Crect x='60' y='230' width='280' height='110' rx='14' fill='%23ffffff' opacity='.8'/%3E%3Crect x='90' y='258' width='140' height='12' rx='6' fill='%23a8703c' opacity='.6'/%3E%3Crect x='90' y='288' width='200' height='12' rx='6' fill='%23c9a071' opacity='.6'/%3E%3Crect x='90' y='318' width='100' height='12' rx='6' fill='%23c9a071' opacity='.6'/%3E%3C/svg%3E" alt="一碗面的时间系列面食与灶台封面">
+        <div class="kx-topic-inner">
+          <span class="kx-topic-status" style="background:#12b5ab;color:#04211f">更新至 E07</span>
+          <h3>一碗面的时间</h3>
+          <p>从一碗面出发，进入手艺人的清晨、午后与深夜。</p>
+        </div>
+      </article>
+      <article class="kx-topic-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23e9e4fb'/%3E%3Ccircle cx='300' cy='110' r='70' fill='%237a6cf0' opacity='.35'/%3E%3Crect x='50' y='180' width='300' height='160' rx='18' fill='%23ffffff' opacity='.85'/%3E%3Ccircle cx='120' cy='250' r='26' fill='%23ffd6c9'/%3E%3Ccircle cx='112' cy='244' r='3.5' fill='%23222b3a'/%3E%3Ccircle cx='128' cy='244' r='3.5' fill='%23222b3a'/%3E%3Ccircle cx='250' cy='250' r='26' fill='%23ffd6c9'/%3E%3Ccircle cx='242' cy='244' r='3.5' fill='%23222b3a'/%3E%3Ccircle cx='258' cy='244' r='3.5' fill='%23222b3a'/%3E%3C/svg%3E" alt="创作者访谈录对话与手稿专题封面">
+        <div class="kx-topic-inner">
+          <span class="kx-topic-status" style="background:#7a6cf0;color:#fff">更新至 E03</span>
+          <h3>创作者访谈录</h3>
+          <p>聊选题、聊焦虑、聊那些被剪掉的镜头与放弃的方案。</p>
+        </div>
+      </article>
+      <article class="kx-topic-card">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Crect width='400' height='400' fill='%23e2f0e8'/%3E%3Cpath d='M0 320 Q100 250 200 320 T400 300 V400 H0 Z' fill='%2373a98c' opacity='.6'/%3E%3Cpath d='M0 350 Q120 290 240 350 T400 330 V400 H0 Z' fill='%234a7a5e' opacity='.7'/%3E%3Ccircle cx='110' cy='110' r='46' fill='%23ffd166' opacity='.9'/%3E%3Cg stroke='%23ffffff' stroke-width='4' fill='none' opacity='.8'%3E%3Cpath d='M250 160 l22 40 l-44 0 z'/%3E%3C/g%3E%3Crect x='300' y='210' width='8' height='90' fill='%234a7a5e'/%3E%3C/svg%3E" alt="周末去山里户外徒步专题封面">
+        <div class="kx-topic-inner">
+          <span class="kx-topic-status" style="background:#ff7a59;color:#fff">更新至 E05</span>
+          <h3>周末去山里</h3>
+          <p>低难度、轻装备、当天往返，适合普通人的户外路线记录。</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== creators ===== -->
+<section class="kx-section kx-section-alt" id="kx-creators">
+  <div class="kx-shell">
+    <div class="kx-section-head">
+      <div>
+        <div class="kx-section-eyebrow">Creators</div>
+        <h2>创作者矩阵 · 社区里最稳定的四束光</h2>
+        <p>他们风格不同、节奏不同，但都把长期主义放在了作品里。点击可查看完整档案。</p>
+      </div>
+    </div>
+    <div class="kx-creator-grid">
+      <article class="kx-creator-card">
+        <div class="kx-creator-avatar" style="background:linear-gradient(135deg,#e2703a,#ffc857)">陈</div>
+        <h3>陈拾光影</h3>
+        <div class="kx-creator-field">城市探索 · 人物访谈</div>
+        <p>前报社摄影记者，习惯用长镜头等待。认为最好的采访是让对方忘记机器存在。</p>
+        <div class="kx-creator-nums">
+          <div><b>214</b>作品</div>
+          <div><b>18.6万</b>关注</div>
+        </div>
+        <button class="kx-creator-more kx-author-btn" data-author="陈拾光影">查看档案</button>
+      </article>
+      <article class="kx-creator-card">
+        <div class="kx-creator-avatar" style="background:linear-gradient(135deg,#12b5ab,#3fd6cc)">林</div>
+        <h3>林一可</h3>
+        <div class="kx-creator-field">生活方式 · 日常记录</div>
+        <p>上班族，也是深夜剪辑者。她的片子总有一个安静的旁白，讲普通人怎么把日子过好。</p>
+        <div class="kx-creator-nums">
+          <div><b>168</b>作品</div>
+          <div><b>12.3万</b>关注</div>
+        </div>
+        <button class="kx-creator-more kx-author-btn" data-author="林一可">查看档案</button>
+      </article>
+      <article class="kx-creator-card">
+        <div class="kx-creator-avatar" style="background:linear-gradient(135deg,#7a6cf0,#b3a9f8)">苏</div>
+        <h3>苏木手记</h3>
+        <div class="kx-creator-field">手作DIY · 创作幕后</div>
+        <p>在窑厂附近工作生活，拍摄陶艺、木作与传统工艺，强调过程而非结果。</p>
+        <div class="kx-creator-nums">
+          <div><b>132</b>作品</div>
+          <div><b>9.7万</b>关注</div>
+        </div>
+        <button class="kx-creator-more kx-author-btn" data-author="苏木手记">查看档案</button>
+      </article>
+      <article class="kx-creator-card">
+        <div class="kx-creator-avatar" style="background:linear-gradient(135deg,#ff7a59,#ffb347)">麦</div>
+        <h3>麦穗向北</h3>
+        <div class="kx-creator-field">户外活动 · 旅行见闻</div>
+        <p>路线规划爱好者，视频里永远附带装备清单。坚信安全下山才算完成一次拍摄。</p>
+        <div class="kx-creator-nums">
+          <div><b>96</b>作品</div>
+          <div><b>8.2万</b>关注</div>
+        </div>
+        <button class="kx-creator-more kx-author-btn" data-author="麦穗向北">查看档案</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== stories / wall + reviews ===== -->
+<section class="kx-section" id="kx-stories">
+  <div class="kx-shell">
+    <div class="kx-section-head">
+      <div>
+        <div class="kx-section-eyebrow">Stories & Voice</div>
+        <h2>品牌故事与社区回声</h2>
+        <p>影像之外，我们也用文字留下拍摄现场的温度，以及观众真实的想法。</p>
+      </div>
+    </div>
+
+    <div class="kx-inspire-grid" style="margin-bottom:46px">
+      <article class="kx-inspire-card">
+        <div class="kx-inspire-num">STORY / 01</div>
+        <h3>那台旧相机教会我们的事</h3>
+        <p>品牌第一支作品只拍了 41 秒，画面抖动、对焦失败，却被社区留到了今天。它提醒我们：完成比完美重要。</p>
+        <ul>
+          <li>先拍起来，再谈风格</li>
+          <li>把失败素材也归档</li>
+        </ul>
+      </article>
+      <article class="kx-inspire-card">
+        <div class="kx-inspire-num">STORY / 02</div>
+        <h3>为什么我们坚持做长视频</h3>
+        <p>在短视频时代逆着来并不聪明，但十五分钟以上，才容得下一个人讲完自己的半生。</p>
+        <ul>
+          <li>尊重受访者的表达节奏</li>
+          <li>留白也是叙事的一部分</li>
+        </ul>
+      </article>
+      <article class="kx-inspire-card">
+        <div class="kx-inspire-num">STORY / 03</div>
+        <h3>一次失败的拍摄复盘</h3>
+        <p>去年雨季的山中拍摄因预案不足中断，我们把这件事写进内部手册第 12 版，也放在官网上提示新加入的创作者。</p>
+        <ul>
+          <li>安全永远优先于素材</li>
+          <li>提前两天确认天气与路线</li>
+        </ul>
+      </article>
+    </div>
+
+    <div class="kx-review-grid">
+      <article class="kx-review-card">
+        <div class="kx-review-top">
+          <span class="kx-mini-avatar" style="background:#e2703a">青</span>
+          <div><strong>青苔与雨</strong><span>注册用户 · 2 年</span></div>
+          <span class="kx-review-stars">★★★★★</span>
+        </div>
+        <p>看《一碗面的时间》时正在加班，突然就没那么焦躁了。这个官网的片子有一种很稳的耐心，是现在很少见的东西。</p>
+      </article>
+      <article class="kx-review-card">
+        <div class="kx-review-top">
+          <span class="kx-mini-avatar" style="background:#12b5ab">老</span>
+          <div><strong>老周拍片</strong><span>创作者 · 1 年半</span></div>
+          <span class="kx-review-stars">★★★★★</span>
+        </div>
+        <p>去年参加影像挑战赛，第一次收到逐帧的点评意见，非常具体，甚至指出了转场的时间点。这种专业度让我留了下来。</p>
+      </article>
+      <article class="kx-review-card">
+        <div class="kx-review-top">
+          <span class="kx-mini-avatar" style="background:#7a6cf0">小</span>
+          <div><strong>小满不吃瓜</strong><span>注册用户 · 8 个月</span></div>
+          <span class="kx-review-stars">★★★★☆</span>
+        </div>
+        <p>画面很干净，没有多余特效。就是有些专题更新间隔偏长，等得有点着急，希望企划节奏能再快一些。</p>
+      </article>
+      <article class="kx-review-card">
+        <div class="kx-review-top">
+          <span class="kx-mini-avatar" style="background:#f0a63a">北</span>
+          <div><strong>北纬三十度</strong><span>注册用户 · 3 年</span></div>
+          <span class="kx-review-stars">★★★★★</span>
+        </div>
+        <p>从城市夜行记第一季看到现在，感觉这个社区真的在慢慢长大。创作者档案页做得很清楚，找同好很方便。</p>
+      </article>
+      <article class="kx-review-card">
+        <div class="kx-review-top">
+          <span class="kx-mini-avatar" style="background:#3a6d81">镜</span>
+          <div><strong>镜头里的猫</strong><span>创作者 · 6 个月</span></div>
+          <span class="kx-review-stars">★★★★☆</span>
+        </div>
+        <p>投稿指南写得比很多平台都细，从画幅到码率都有建议。第一次投就被推荐到首页，很受鼓舞。</p>
+      </article>
+      <article class="kx-review-card">
+        <div class="kx-review-top">
+          <span class="kx-mini-avatar" style="background:#ff7a59">阿</span>
+          <div><strong>阿姨的猫</strong><span>注册用户 · 1 年</span></div>
+          <span class="kx-review-stars">★★★★★</span>
+        </div>
+        <p>萌宠系列的治愈影像我几乎每集都看，画面高清又不吵。作为企业官网能看到这么多原创内容，挺难得的。</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== news ===== -->
+<section class="kx-section kx-section-alt" id="kx-news">
+  <div class="kx-shell">
+    <div class="kx-section-head">
+      <div>
+        <div class="kx-section-eyebrow">Newsroom</div>
+        <h2>企业动态 · 官方发布与更新日志</h2>
+        <p>关于品牌、创作者扶持与内容生态的最新进展，均在此处同步。</p>
+      </div>
+      <a href="#kx-contact" class="kx-section-link">媒体联系 <span>→</span></a>
+    </div>
+    <div class="kx-news-list">
+      <div class="kx-news-item">
+        <span class="kx-news-date">2026-11-18</span>
+        <h3>《城市夜行记》第三季正式上线，首集走进老城区深夜食堂</h3>
+        <span class="kx-news-cat">专题发布</span>
+      </div>
+      <div class="kx-news-item">
+        <span class="kx-news-date">2026-11-16</span>
+        <h3>「冬日影像挑战」报名开启：用三分钟讲一个身边的故事</h3>
+        <span class="kx-news-cat">比赛报名</span>
+      </div>
+      <div class="kx-news-item">
+        <span class="kx-news-date">2026-11-12</span>
+        <h3>创作者扶持计划 2.0 发布，新增原创短片剧本工坊与剪辑陪跑</h3>
+        <span class="kx-news-cat">官方发布</span>
+      </div>
+      <div class="kx-news-item">
+        <span class="kx-news-date">2026-11-08</span>
+        <h3>kiki小野猫官网会员中心升级，支持合集收藏与下载清单管理</h3>
+        <span class="kx-news-cat">产品更新</span>
+      </div>
+      <div class="kx-news-item">
+        <span class="kx-news-date">2026-10-29</span>
+        <h3>品牌与三家本地公益机构达成年度合作，共同记录流浪动物救助日常</h3>
+        <span class="kx-news-cat">社会责任</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="kx-section" id="kx-faq">
+  <div class="kx-shell">
+    <div class="kx-section-head" style="justify-content:center;text-align:center">
+      <div>
+        <div class="kx-section-eyebrow">Help Center</div>
+        <h2>常见问题</h2>
+        <p style="margin:8px auto 0">关于投稿、版权、合作与账号的高频疑问，先看这里。</p>
+      </div>
+    </div>
+    <div class="kx-faq-wrap">
+      <details class="kx-faq-item" open>
+        <summary>如何向 kiki小野猫 投稿自己的作品？</summary>
+        <p>注册账号后进入投稿入口，填写作品标题、简短说明与拍摄手记，上传成片文件或提供可访问的预览链接即可。我们建议画幅 16:9、时长 3 至 30 分钟，音频尽量单独保留干净音轨。提交后通常 5 个工作日内会收到初审反馈。</p>
+      </details>
+      <details class="kx-faq-item">
+        <summary>平台对作品的版权归属如何约定？</summary>
+        <p>作品著作权始终归创作者本人所有。平台仅在获得授权的前提下进行展示、推荐与专题收录。若涉及商业合作或二次剪辑，我们会与创作者单独签署授权文件，并明确使用范围与期限。</p>
+      </details>
+      <details class="kx-faq-item">
+        <summary>「冬日影像挑战」的报名条件是什么？</summary>
+        <p>任何注册用户均可报名，不限专业背景与设备型号。作品需为原创，时长不超过 3 分钟，主题围绕“身边的故事”。报名通道开放至 12 月 20 日，评审分为社区投票与专业评审两部分。</p>
+      </details>
+      <details class="kx-faq-item">
+        <summary>企业可以发起联合创作吗？</summary>
+        <p>可以。我们接受品牌短片、人物纪录、产品场景影像等类型的合作。流程为：需求沟通、选题匹配创作者、脚本确认、拍摄制作、成片交付。请在联系页面留下需求概述与时间预期，商务同事会在两个工作日内回复。</p>
+      </details>
+      <details class="kx-faq-item">
+        <summary>视频下载功能有什么限制？</summary>
+        <p>标注为可下载的作品可在会员中心加入下载清单，用于个人离线观看。禁止用于二次分发、商业放映或任何形式的再上传。尊重原创是我们持续运营的基础。</p>
+      </details>
+      <details class="kx-faq-item">
+        <summary>如何成为签约创作者？</summary>
+        <p>通常在平台上持续发布 10 部以上作品、保持稳定更新频率与清晰个人风格后，编辑部会主动联系。你也可以通过创作者档案页的申请入口自荐，附上作品集与创作计划。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ===== contact ===== -->
+<section class="kx-section" id="kx-contact">
+  <div class="kx-shell">
+    <div class="kx-contact-wrap">
+      <div class="kx-contact-info">
+        <h2>联系我们 · 一起拍点真实的</h2>
+        <p>无论你想投稿、发起合作，还是只想聊聊某个选题，都欢迎给 kiki小野猫官网留言。我们更愿意在开场就聊具体的事。</p>
+        <div class="kx-contact-lines">
+          <span><b>合作邮箱</b>studio@kikixiaoyemao.com</span>
+          <span><b>投稿咨询</b>每周一至周五 10:00 - 19:00</span>
+          <span><b>办公地址</b>杭州市拱墅区影像产业园 B 座 3 层</span>
+        </div>
+      </div>
+      <form class="kx-contact-form" id="kxContactForm">
+        <input type="text" placeholder="你的称呼" aria-label="你的称呼" required>
+        <input type="email" placeholder="联系邮箱" aria-label="联系邮箱" required>
+        <input type="text" placeholder="一句话说明来意（投稿 / 合作 / 反馈）" aria-label="来意">
+        <button type="submit">提交留言</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== footer ===== -->
+<footer class="kx-footer">
+  <div class="kx-shell">
+    <div class="kx-footer-grid">
+      <div class="kx-footer-brand">
+        <div class="kx-brand">
+          <span class="kx-brand-mark">Ki</span>
+          <span class="kx-brand-name">kiki小野猫<small>LIFE VIDEO STUDIO</small></span>
+        </div>
+        <p>kiki小野猫官方网站 · 原创生活影像品牌。<br>专注城市记录、人物访谈与手作工艺，<br>以真实、温暖、多元的内容陪伴每一位观众。</p>
+      </div>
+      <div>
+        <h3>内容</h3>
+        <ul>
+          <li><a href="#kx-videos">视频焦点</a></li>
+          <li><a href="#kx-topics">专题企划</a></li>
+          <li><a href="#kx-stories">品牌故事</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>社区</h3>
+        <ul>
+          <li><a href="#kx-creators">创作者矩阵</a></li>
+          <li><a href="#kx-contact">投稿入口</a></li>
+          <li><a href="#kx-faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于</h3>
+        <ul>
+          <li><a href="#kx-about">品牌介绍</a></li>
+          <li><a href="#kx-news">企业动态</a></li>
+          <li><a href="#kx-contact">商务合作</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="kx-footer-bottom">
+      <span>© 2020 - 2026 kiki小野猫 版权所有 · 持续运营中</span>
+      <span><a href="#kx-faq">用户协议</a> · <a href="#kx-faq">隐私说明</a> · 浙ICP备 2026xxxxxx 号</span>
+    </div>
+  </div>
+</footer>
+
+<button class="kx-back-top" id="kxBackTop" aria-label="回到顶部">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
+<div class="kx-toast" id="kxToast" role="status"></div>
+
+<!-- modal -->
+<div class="kx-modal-mask" id="kxModalMask">
+  <div class="kx-modal" role="dialog" aria-modal="true">
+    <button class="kx-modal-close" id="kxModalClose" aria-label="关闭">×</button>
+    <div id="kxModalContent"></div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- mobile nav ---------- */
+  var burger = document.getElementById('kxBurger');
+  var nav = document.getElementById('kxNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      var open = nav.classList.toggle('kx-open');
+      burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){
+        nav.classList.remove('kx-open');
+        burger.setAttribute('aria-expanded','false');
+      });
+    });
+  }
+
+  /* ---------- active nav highlight ---------- */
+  var sections = ['kx-home','kx-videos','kx-topics','kx-creators','kx-stories','kx-news','kx-contact'];
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.kx-nav a'));
+  function setCurrent(){
+    var pos = window.scrollY + 160;
+    var current = sections[0];
+    sections.forEach(function(id){
+      var el = document.getElementById(id);
+      if(el && el.offsetTop <= pos) current = id;
+    });
+    navLinks.forEach(function(a){
+      a.classList.toggle('kx-current', a.getAttribute('href') === '#' + current);
+    });
+  }
+  window.addEventListener('scroll', setCurrent, {passive:true});
+  setCurrent();
+
+  /* ---------- toast ---------- */
+  var toast = document.getElementById('kxToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.classList.add('kx-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('kx-show'); }, 2200);
+  }
+
+  /* ---------- modal ---------- */
+  var mask = document.getElementById('kxModalMask');
+  var modalContent = document.getElementById('kxModalContent');
+  var modalClose = document.getElementById('kxModalClose');
+  function openModal(html){
+    modalContent.innerHTML = html;
+    mask.classList.add('kx-show');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeModal(){
+    mask.classList.remove('kx-show');
+    document.body.style.overflow = '';
+  }
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(mask) mask.addEventListener('click', function(e){ if(e.target === mask) closeModal(); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') closeModal(); });
+
+  /* ---------- like buttons ---------- */
+  document.querySelectorAll('.kx-like-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var numEl = btn.querySelector('.kx-like-num');
+      var base = parseInt(btn.getAttribute('data-kx-count') || '0', 10);
+      var liked = btn.classList.toggle('kx-liked');
+      var next = liked ? base + 1 : base;
+      if(numEl) numEl.textContent = next;
+      showToast(liked ? '已点赞，感谢支持原创内容' : '已取消点赞');
+    });
+  });
+
+  /* ---------- save buttons ---------- */
+  document.querySelectorAll('.kx-save-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.classList.toggle('kx-saved');
+      btn.lastChild.textContent = saved ? '已收藏' : '收藏';
+      showToast(saved ? '已加入收藏清单' : '已从收藏清单移除');
+    });
+  });
+
+  /* ---------- share buttons ---------- */
+  document.querySelectorAll('.kx-share-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var card = btn.closest('.kx-video-card');
+      var title = card ? card.querySelector('h3').textContent : 'kiki小野猫 精品内容';
+      var link = window.location.href.split('#')[0] + '#kx-videos';
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(link).then(function(){
+          showToast('链接已复制：' + title.slice(0, 12) + '…');
+        }).catch(function(){
+          showToast('分享链接：' + link);
+        });
+      }else{
+        showToast('分享链接：' + link);
+      }
+    });
+  });
+
+  /* ---------- author modal ---------- */
+  document.querySelectorAll('.kx-author-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var name = btn.getAttribute('data-author') || '创作者';
+      openModal(
+        '<h3>' + name + ' · 创作者档案</h3>' +
+        '<p class="kx-modal-sub">kiki小野猫 签约创作者 · 持续更新中</p>' +
+        '<div class="kx-modal-body">' +
+        '<p>长期在平台上发布原创作品，风格稳定、叙事克制，是该领域内受到社区持续关注的创作者之一。作品以真实场景与人物为核心，强调拍摄过程中的尊重与耐心。</p>' +
+        '<div class="kx-tag-row"><span class="kx-tag">原创</span><span class="kx-tag">高清</span><span class="kx-tag">长期更新</span><span class="kx-tag">社区推荐</span></div>' +
+        '<p style="font-size:13px;color:#6b7488">如需合作或转载，请通过官网联系页说明用途，我们会转达给创作者本人。</p>' +
+        '</div>'
+      );
+    });
+  });
+
+  /* ---------- search ---------- */
+  var searchForm = document.getElementById('kxSearchForm');
+  var searchInput = document.getElementById('kxSearchInput');
+  function doSearch(kw){
+    kw = (kw || '').trim();
+    if(!kw){
+      showToast('请输入关键词，如：城市、手作、访谈');
+      return;
+    }
+    var k = kw.toLowerCase();
+    var matched = [];
+    document.querySelectorAll('.kx-video-card').forEach(function(card){
+      var text = card.textContent.toLowerCase();
+      if(text.indexOf(k) !== -1) matched.push(card.querySelector('h3').textContent);
+    });
+    if(matched.length){
+      showToast('找到 ' + matched.length + ' 条相关内容：' + matched[0].slice(0, 14) + '…');
+    }else{
+      showToast('暂无完全匹配，试试「城市」「手作」「萌宠」');
+    }
+  }
+  if(searchForm){
+    searchForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      doSearch(searchInput.value);
+    });
+  }
+
+  /* ---------- contact form ---------- */
+  var contactForm = document.getElementById('kxContactForm');
+  if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      contactForm.reset();
+      showToast('留言已提交，我们会在两个工作日内回复');
+    });
+  }
+
+  /* ---------- back to top ---------- */
+  var backTop = document.getElementById('kxBackTop');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 480) backTop.classList.add('kx-show');
+    else backTop.classList.remove('kx-show');
+  }, {passive:true});
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- count up once ---------- */
+  var counted = false;
+  function countUp(){
+    if(counted) return;
+    var stats = document.querySelectorAll('[data-kx-count]');
+    if(!stats.length) return;
+    var trigger = stats[0].getBoundingClientRect().top;
+    if(trigger > window.innerHeight - 80) return;
+    counted = true;
+    stats.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-kx-count'), 10) || 0;
+      var start = performance.now();
+      var dur = 1100;
+      function tick(now){
+        var p = Math.min((now - start) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(target * eased);
+        if(p < 1) requestAnimationFrame(tick);
+        else el.textContent = target;
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  window.addEventListener('scroll', countUp, {passive:true});
+  countUp();
+})();
+</script>
+</body>
+                                               </html>
